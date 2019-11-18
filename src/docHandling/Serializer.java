@@ -28,7 +28,7 @@ public class Serializer {
 		if (!objectList.isEmpty()) {
 			Object object = objectList.pop();
 
-			if (!map.get(object).isSerialized() || !map.containsKey(object)) {
+			if (!map.containsKey(object) || !map.get(object).isSerialized() ) {
 				Element xmlObject = new Element("object");
 				Class<?> objectClass = object.getClass();
 
